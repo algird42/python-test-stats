@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-text-stats"
+version = "0.1.0"
+description = "A small dependency-free command-line text analyzer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "algird42" }
+]
+keywords = ["cli", "text", "statistics", "python"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+text-stats = "text_stats.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
